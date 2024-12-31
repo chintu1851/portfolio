@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chintan Patel - Portfolio</title>
+    <link rel="icon" href='./assets/cdlogo3.jpeg' />
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -39,10 +41,14 @@
         <section id="home" class="hero ">
             <div class="hero-bg"></div>
             <div class="container">
-                <h2>Hi There!</h2>
+                <h3>Hi There!</h3>
                 <h1 class="glitch" data-text="I'm Chintan Patel">I'm Chintan Patel</h1>
-                <h2 class="subtitle">Frontend Developer & UI/UX Designer</h2>
-                <p class="intro">Crafting digital experiences that inspire and engage.</p>
+                <p class="animated-heading"><span id="words">Ui / UX Designer</span></p>
+                </h2>
+                <p class="glitch" class="intro">Crafting digital experiences that inspire and engage.</p>
+                <!-- <div class="animated-heading">
+                    <h1>Hi i'm a <span id="words">Ui / UX Design</span></h1>
+                </div> -->
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/pchintan71/" target="_blank" class="social-icon">
                         <i class="fab fa-linkedin"></i>
@@ -356,6 +362,17 @@
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var words = ["Ui / UX Designer", "Frontend Developer", "iOS Developer", "Web Developer"],
+                i = 0;
+            setInterval(function () {
+                $('#words').fadeOut(function () {
+                    $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+                });
+            }, 3000)
+        })();
+    </script>
     <script src="src/script.js"></script>
 </body>
 

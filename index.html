@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href='./assets/cdlogo3.jpeg' />
     <title>CodeByChintan</title>
     <style>
         /* Google Font Import */
@@ -15,7 +17,8 @@
             box-sizing: border-box;
         }
 
-        body, html {
+        body,
+        html {
             height: 100%;
             font-family: 'Poppins', sans-serif;
             overflow: hidden;
@@ -44,7 +47,7 @@
             border-radius: 20px;
             padding: 50px;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             max-width: 500px;
             width: 90%;
         }
@@ -63,7 +66,7 @@
 
         .splash-content p {
             font-size: 22px;
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 30px;
             opacity: 0;
             transform: translateY(30px);
@@ -74,7 +77,7 @@
         .loader {
             width: 80px;
             height: 80px;
-            border: 6px solid rgba(255,255,255,0.2);
+            border: 6px solid rgba(255, 255, 255, 0.2);
             border-top: 6px solid #ffffff;
             border-radius: 50%;
             margin: 0 auto;
@@ -94,7 +97,7 @@
 
         .particle {
             position: absolute;
-            background: rgba(255,255,255,0.5);
+            background: rgba(255, 255, 255, 0.5);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -115,21 +118,25 @@
         }
 
         @keyframes spin {
-            100% { transform: rotate(360deg); }
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes particleAnimation {
-            0% { 
+            0% {
                 transform: translateY(0) scale(1);
                 opacity: 1;
             }
-            100% { 
+
+            100% {
                 transform: translateY(-100vh) scale(0);
                 opacity: 0;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="particles" id="particles"></div>
 
@@ -174,9 +181,325 @@
             }, 2000);
         }
 
-        // Initialize
         createParticles();
         redirectToHome();
     </script>
 </body>
+
 </html>
+
+
+
+<!-- <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <h3>Hi There!</h3>
+                <h1 class="glitch" data-text="I'm Chintan Patel">I'm Chintan Patel</h1>
+                <h2 class="animated-heading">
+                    <span id="words">Ui / UX Design</span>
+                </h2>
+                <p class="glitch intro">Crafting digital experiences that inspire and engage.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/pchintan71/" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/chintu1851" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.behance.net/patelchintan3" target="_blank" class="social-icon">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="education">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-content">
+                            <h3>Web Development – Front End Design</h3>
+                            <p>George Brown College, Toronto, ON</p>
+                            <p>September 2023 – August 2024 </p>
+                            <p> GPA – 4/4</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-content">
+                            <h3>Mobile Application Development & Strategy</h3>
+                            <p>George Brown College, Toronto, ON</p>
+                            <p>September 2022 – August 2023</p>
+                            <p>GPA – 3.4/4</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-content">
+                            <h3>Bachelor of Technology in Computer Engineering</h3>
+                            <p>Charotar University of Science and Technology, India</p>
+                            <p>August 2018 – April 2022</p>
+                            <p>GPA – 3.56/4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item" ```html data-aos="fade-up">
+                        <div class="timeline-content">
+                            <h3>B12Give INC, Toronto, Canada</h3>
+                            <h4>Frontend Developer – Co-op <br>May 2024 - August 2024</h4>
+                            <ul>
+                                <li>Worked on developing responsive web pages using ReactJS, HTML, and CSS</li>
+                                <li>Collaborated with the design team to implement UI/UX improvements</li>
+                                <li>Contributed to the development of user-centered digital experiences</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-content">
+                            <h3>Kintu Design Pvt. Ltd., India</h3>
+                            <h4>UI/UX Intern<br>December 2021 - May 2022</h4>
+                            <ul>
+                                <li>Assisted in wireframing and prototyping for client projects</li>
+                                <li>Performed user research to enhance the user experience</li>
+                                <li>Collaborated with the design team to create visually appealing interfaces</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-content">
+                            <h3>Born Techies, India</h3>
+                            <h4>Web Developer<br>June 2021 - December 2021</h4>
+                            <ul>
+                                <li>Developed and maintained websites using HTML, CSS, JavaScript, and React</li>
+                                <li>Worked on responsive design implementation for mobile-first websites</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML5</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                        <div class="percentage">90%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <div class="percentage">80%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                        <div class="percentage">85%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-react"></i>
+                        <h3>React</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                        <div class="percentage">75%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-node-js"></i>
+                        <h3>Node.js</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                        <div class="percentage">70%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-git-alt"></i>
+                        <h3>Git</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <div class="percentage">80%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Responsive Design</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                        <div class="percentage">85%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-uikit"></i>
+                        <h3>UI&UX</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <div class="percentage">90%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-angular"></i>
+                        <h3>Angular JS</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <div class="percentage">80%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <div class="percentage">80%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-wordpress"></i>
+                        <h3>Wordpress</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <div class="percentage">80%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fas fa-database"></i>
+                        <h3>SQL</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <div class="percentage">80%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-apple"></i>
+                        <h3>iOS Development</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <div class="percentage">80%</div>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in">
+                        <i class="fab fa-react"></i>
+                        <h3>React Native</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <div class="percentage">80%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="tabs">
+                <button class="tab-link active" data-tab="uiux">UI/UX</button>
+                <button class="tab-link" data-tab="mobile">Mobile App</button>
+                <button class="tab-link" data-tab="web">Web</button>
+            </div>
+
+            <div class="tab-content">
+                <div id="uiux" class="tab-panel active">
+                    <div class="project-block">
+                        <img src="im.jpg" alt="UI/UX Project 1">
+                        <div class="project-details">
+                            <h3>UI/UX Project 1</h3>
+                            <p>Details about UI/UX project...</p>
+                        </div>
+                    </div>
+                    <div class="project-block">
+                        <img src="im.jpg" alt="UI/UX Project 2">
+                        <div class="project-details">
+                            <h3>UI/UX Project 2</h3>
+                            <p>Details about UI/UX project...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mobile" class="tab-panel">
+                    <div class="project-block">
+                        <img src="im.jpg" alt="Mobile App Project 1">
+                        <div class="project-details">
+                            <h3>Mobile App Project 1</h3>
+                            <p>Details about Mobile App project...</p>
+                        </div>
+                    </div>
+                    <div class="project-block">
+                        <img src="im.jpg" alt="Mobile App Project 2">
+                        <div class="project-details">
+                            <h3>Mobile App Project 2</h3>
+                            <p>Details about Mobile App project...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="web" class="tab-panel">
+                    <div class="project-block">
+                        <img src="im.jpg" alt="Web Project 1">
+                        <div class="project-details">
+                            <h3>Web Project 1</h3>
+                            <p>Details about Web project...</p>
+                        </div>
+                    </div>
+                    <div class="project-block">
+                        <img src="im.jpg" alt="Web Project 2">
+                        <div class="project-details">
+                            <h3>Web Project 2</h3>
+                            <p>Details about Web project...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="contact-description">We'd love to hear from you! Feel free to reach out with any questions or
+                    feedback.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name"><i class="fas fa-user"></i> Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder=" " required></textarea>
+                        <label for="message"><i class="fas fa-comment"></i> Message</label>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Chintan Patel. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/chintu1851" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/pchintan71/" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer> -->
