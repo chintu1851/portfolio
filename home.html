@@ -456,29 +456,30 @@
             </div>
         </section>
 
-   <section id="contact">
-    <div class="container">
-        <h2 class="section-title">Contact Us</h2>
-        <p class="contact-description">We'd love to hear from you! Feel free to reach out with any questions or feedback.</p>
-        <form class="contact-form" id="contact-form">
-            <div class="form-group">
-                <input type="text" id="name" name="name" placeholder=" " required>
-                <label for="name"><i class="fas fa-user"></i> Name</label>
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" name="email" placeholder=" " required>
-                <label for="email"><i class="fas fa-envelope"></i> Email</label>
-            </div>
-            <div class="form-group">
-                <textarea id="message" name="message" placeholder=" " required></textarea>
-                <label for="message"><i class="fas fa-comment"></i> Message</label>
-            </div>
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="contact-description">We'd love to hear from you! Feel free to reach out with any questions or
+                    feedback.</p>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name"><i class="fas fa-user"></i> Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder=" " required></textarea>
+                        <label for="message"><i class="fas fa-comment"></i> Message</label>
+                    </div>
 
-            <!-- Submit button -->
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </div>
-</section>
+                    <!-- Submit button -->
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
 
 
     </main>
@@ -495,7 +496,7 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script type="text/javascript">
         (function () {
             var words = ["Ui / UX Designer", "Frontend Developer", "iOS Developer", "Web Developer"],
@@ -508,18 +509,26 @@
         })();
     </script>
     <script src="src/script.js">
+        function showSuccessAlert(event) {
+            event.preventDefault(); // Prevent the form from submitting immediately
+            // Display a success message using JavaScript
+            alert("Your message has been successfully submitted!");
+            // Now submit the form to FormSubmit after the alert
+            setTimeout(function () {
+                event.target.submit();
+            }, 1000); // Delay the form submission for 1 second to show the alert
+        }
+    </script>
+   <script>
     // Initialize EmailJS with your public key
     (function() {
         emailjs.init("_C9xaIpfTjP6Dso62"); // Replace with your public key
     })();
-
     // Handle form submission
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent default form submission
-
         // Show success message (popup)
         alert("Your message has been successfully submitted!");
-
         // Send the email through EmailJS
         emailjs.sendForm("service_xl1rrce", "template_68kk0ep", this)
             .then(function(response) {
@@ -527,12 +536,10 @@
             }, function(error) {
                 console.error("Error:", error);
             });
-
         // Optionally, reset the form after submission
         this.reset();
     });
-
-    </script>
+</script>
 </body>
 
 </html>
