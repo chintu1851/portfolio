@@ -500,8 +500,19 @@
         </div>
     </footer>
 
-    <script>
-        // Success alert on form submission
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var words = ["Ui / UX Designer", "Frontend Developer", "iOS Developer", "Web Developer"],
+                i = 0;
+            setInterval(function () {
+                $('#words').fadeOut(function () {
+                    $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+                });
+            }, 3000)
+        })();
+    </script>
+    <script src="src/script.js">
         function showSuccessAlert(event) {
             event.preventDefault(); // Prevent the form from submitting immediately
 
@@ -514,21 +525,6 @@
             }, 1000); // Delay the form submission for 1 second to show the alert
         }
     </script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script type="text/javascript">
-        // Typewriter-like text change effect
-        (function () {
-            var words = ["Ui / UX Designer", "Frontend Developer", "iOS Developer", "Web Developer"],
-                i = 0;
-            setInterval(function () {
-                $('#words').fadeOut(function () {
-                    $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
-                });
-            }, 3000);
-        })();
-    </script>
-
 </body>
 
 </html>
