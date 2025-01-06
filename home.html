@@ -461,7 +461,8 @@
                     feedback.</p>
 
                 <!-- Form updated to work with FormSubmit.co -->
-                <form class="contact-form" action="https://formsubmit.co/7cbea23d1d3a6007dfa2f825838da96d" method="POST">
+                <form class="contact-form" action="https://formsubmit.co/7cbea23d1d3a6007dfa2f825838da96d" method="POST"
+                    onsubmit="showSuccessAlert(event)">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder=" " required>
                         <label for="name"><i class="fas fa-user"></i> Name</label>
@@ -511,7 +512,19 @@
             }, 3000)
         })();
     </script>
-    <script src="src/script.js"></script>
+    <script src="src/script.js">
+        function showSuccessAlert(event) {
+            event.preventDefault(); // Prevent the form from submitting immediately
+
+            // Display a success message using JavaScript
+            alert("Your message has been successfully submitted!");
+
+            // Now submit the form to FormSubmit after the alert
+            setTimeout(function () {
+                event.target.submit();
+            }, 1000); // Delay the form submission for 1 second to show the alert
+        }
+    </script>
 </body>
 
 </html>
