@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 </head>
 
 <body>
@@ -454,37 +456,30 @@
             </div>
         </section>
 
-        <section id="contact">
-            <div class="container">
-                <h2 class="section-title">Contact Us</h2>
-                <p class="contact-description">We'd love to hear from you! Feel free to reach out with any questions or
-                    feedback.</p>
-
-                <!-- Form updated to work with FormSubmit.co -->
-                <form class="contact-form" action="https://formsubmit.co/7cbea23d1d3a6007dfa2f825838da96d" method="POST"
-                    onsubmit="showSuccessAlert(event)">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder=" " required>
-                        <label for="name"><i class="fas fa-user"></i> Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder=" " required>
-                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder=" " required></textarea>
-                        <label for="message"><i class="fas fa-comment"></i> Message</label>
-                    </div>
-
-                    <!-- Hidden inputs for redirect and subject -->
-                    <input type="hidden" name="_next" value="https://chintanportfolio.vercel.app/">
-                    <input type="hidden" name="_subject" value="New Contact Form Submission">
-
-                    <!-- Submit button -->
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+   <section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="contact-description">We'd love to hear from you! Feel free to reach out with any questions or feedback.</p>
+        <form class="contact-form" id="contact-form">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name"><i class="fas fa-user"></i> Name</label>
             </div>
-        </section>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" placeholder=" " required></textarea>
+                <label for="message"><i class="fas fa-comment"></i> Message</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
 
     </main>
 
@@ -512,19 +507,32 @@
             }, 3000)
         })();
     </script>
-    <script src="src/script.js">
-        function showSuccessAlert(event) {
-            event.preventDefault(); // Prevent the form from submitting immediately
+   <script>
+    // Initialize EmailJS with your public key
+    (function() {
+        emailjs.init("_C9xaIpfTjP6Dso62"); // Replace with your public key
+    })();
 
-            // Display a success message using JavaScript
-            alert("Your message has been successfully submitted!");
+    // Handle form submission
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
 
-            // Now submit the form to FormSubmit after the alert
-            setTimeout(function () {
-                event.target.submit();
-            }, 1000); // Delay the form submission for 1 second to show the alert
-        }
-    </script>
+        // Show success message (popup)
+        alert("Your message has been successfully submitted!");
+
+        // Send the email through EmailJS
+        emailjs.sendForm("service_xl1rrce", "template_68kk0ep", this)
+            .then(function(response) {
+                console.log("Success:", response);
+            }, function(error) {
+                console.error("Error:", error);
+            });
+
+        // Optionally, reset the form after submission
+        this.reset();
+    });
+</script>
+
 </body>
 
 </html>
