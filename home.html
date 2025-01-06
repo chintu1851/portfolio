@@ -22,7 +22,11 @@
 
     <header>
         <nav>
-            <div class="logo">CodeByChintan</div>
+       <div class="logo">
+  <a href="#home" style="text-decoration: none; color: inherit;">CodeByChintan</a>
+</div>
+
+
             <ul class="nav-links">
                 <li><a href="#home" class="nav-item" data-nav-item>Home</a></li>
                 <li><a href="#education" class="nav-item" data-nav-item>Education</a></li>
@@ -30,6 +34,10 @@
                 <li><a href="#skills" class="nav-item" data-nav-item>Skills</a></li>
                 <li><a href="#projects" class="nav-item" data-nav-item>Projects</a></li>
                 <li><a href="#contact" class="nav-item" data-nav-item>Contact</a></li>
+                <li>
+                <li><a href="#contact" class="nav-item" data-nav-item><button type="submit" class="btn">Send
+                            Message</button></a></li>
+                </li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -414,7 +422,7 @@
                                 scores across all users.</p>
                         </div>
                         <button class="project-btn"
-                            onclick="window.open('https://chintu1851.github.io/mindmazegame', '_blank')">
+                            onclick="window.open('https://github.com/chintu1851/mindmazegame', '_blank')">
                             View Project
                         </button>
 
@@ -446,8 +454,7 @@
                                 solution for those seeking professional physiotherapy care, fostering improved health
                                 and recovery through personalized treatment options.</p>
                         </div>
-                        <button class="project-btn"
-                            onclick="window.open('https://github.com/harshil3662/mantraflex', '_blank')">
+                        <button class="project-btn" onclick="window.open('https://mantraflex.com/', '_blank')">
                             View Project
                         </button>
 
@@ -496,7 +503,7 @@
         </div>
     </footer>
 
- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script type="text/javascript">
         (function () {
             var words = ["Ui / UX Designer", "Frontend Developer", "iOS Developer", "Web Developer"],
@@ -519,27 +526,27 @@
             }, 3000); // Delay the form submission for 1 second to show the alert
         }
     </script>
-   <script>
-    // Initialize EmailJS with your public key
-    (function() {
-        emailjs.init("_C9xaIpfTjP6Dso62"); // Replace with your public key
-    })();
-    // Handle form submission
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent default form submission
-        // Show success message (popup)
-        alert("Your message has been successfully submitted!");
-        // Send the email through EmailJS
-        emailjs.sendForm("service_xl1rrce", "template_68kk0ep", this)
-            .then(function(response) {
-                console.log("Success:", response);
-            }, function(error) {
-                console.error("Error:", error);
-            });
-        // Optionally, reset the form after submission
-        this.reset();
-    });
-</script>
+    <script>
+        // Initialize EmailJS with your public key
+        (function () {
+            emailjs.init("_C9xaIpfTjP6Dso62"); // Replace with your public key
+        })();
+        // Handle form submission
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+            // Show success message (popup)
+            alert("Your message has been successfully submitted!");
+            // Send the email through EmailJS
+            emailjs.sendForm("service_xl1rrce", "template_68kk0ep", this)
+                .then(function (response) {
+                    console.log("Success:", response);
+                }, function (error) {
+                    console.error("Error:", error);
+                });
+            // Optionally, reset the form after submission
+            this.reset();
+        });
+    </script>
 </body>
 
 </html>
