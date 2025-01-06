@@ -249,7 +249,7 @@ section {
 /* Glitch effect */
 .glitch {
     position: relative;
-    color: #b1b1b1;
+    color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -264,15 +264,15 @@ section {
 }
 
 .glitch::before {
-    left: 2px;
-    text-shadow: -1px 0 var(--primary-color);
+    left: 1px;
+    text-shadow: 0px 0 var(--primary-color);
     clip: rect(24px, 550px, 90px, 0);
     animation: glitch-anim 5s infinite linear alternate-reverse;
 }
 
 .glitch::after {
-    left: -2px;
-    text-shadow: -2px 0 #c6d2d4;
+    left: 0px;
+    text-shadow: 0 var(--primary-color);
     clip: rect(85px, 550px, 140px, 0);
    
 }
