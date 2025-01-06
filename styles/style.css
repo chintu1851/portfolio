@@ -707,7 +707,8 @@ background-color: var(--text-color);
     .nav-links {
         position: fixed;
         right: -100%;
-        top: 5rem;
+        top: 4rem;
+        line-height: 0;
         flex-direction: column;
         background-color: var(--bg-color);
         width: 100%;
