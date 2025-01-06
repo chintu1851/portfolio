@@ -10,7 +10,7 @@
     --secondary-color: #00cec9;
     --text-color: #ffffff;
     --bg-color: #161616;
-    --accent-color: #fdcb6e;
+    --accent-color: #35b2c1;
 }
 
 body {
@@ -242,7 +242,7 @@ section {
 }
 
 .social-icon:hover {
-    color: var(--accent-color);
+    color: var(--primary-color);
     transform: translateY(-3px);
 }
 
@@ -384,7 +384,9 @@ section {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
+.timeline-content h3{
+    color: var(--primary-color);
+}
 /* Skills section */
 .skills-grid {
     display: grid;
@@ -497,9 +499,12 @@ section {
 }
 
 .project-block {
+    padding: 10px;
+    display: grid;
     width: calc(33.333% - 20px);
     max-width: 350px;
     background-color: rgba(255, 255, 255, 0.05);
+    height: auto;
     color: var(--text-color);
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -526,7 +531,7 @@ section {
 .project-details h3 {
     margin: 0 0 10px;
     font-size: 1.25rem;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 .project-details p {
@@ -619,12 +624,13 @@ section {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+     font-weight: bold;
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    background-color: var(--text-color);
+    /* transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); */
 }
 
 /* Footer */
@@ -648,6 +654,24 @@ footer .social-links a {
 
 footer .social-links a:hover {
     color: var(--accent-color);
+}
+/* Styling for View Details button */
+.project-btn {
+    height: 40px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color); /* Blue background */
+    color: black; /* White text */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.project-btn:hover {
+background-color: var(--text-color);
 }
 
 /* Animations */
