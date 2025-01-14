@@ -718,6 +718,7 @@ background-color: var(--text-color);
     }
 
     .nav-links.active {
+        padding-bottom: 20px;
         right: 0;
     }
 
